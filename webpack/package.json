@@ -36,6 +36,7 @@
     "node-notifier": "^7.0.1",
     "portfinder": "^1.0.26",
     "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.0",
     "webpack-bundle-analyzer": "^3.8.0",
