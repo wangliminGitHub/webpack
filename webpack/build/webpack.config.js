@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-10 20:26:11
- * @LastEditTime: 2020-06-08 23:08:05
+ * @LastEditTime: 2020-06-11 22:28:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /myStudent/webpack/build/webpack.config.js
@@ -12,7 +12,9 @@ const config = require('../config')
 module.exports = {
 	context: path.resolve(__dirname, '../'),
 	entry: {
-		app: './src/index.js',
+		pageA: './src/pageA.js',
+		pageB: './src/pageB.js',
+		pageC: './src/pageC.js',
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),
@@ -38,6 +40,29 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 		],
+	},
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+			minSize: 30000,
+			maxSize: 0,
+			minChunks: 2,
+			maxAsyncRequests: 6,
+			maxInitialRequests: 4,
+			automaticNameDelimiter: '~',
+			name: true,
+			cacheGroups: {
+				vendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10,
+				},
+				default: {
+					minChunks: 2,
+					priority: -20,
+					reuseExistingChunk: true,
+				},
+			},
+		},
 	},
 	resolve: {
 		extensions: ['.js', '.json'],

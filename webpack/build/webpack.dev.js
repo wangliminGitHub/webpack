@@ -2,7 +2,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-10 20:26:38
- * @LastEditTime: 2020-06-08 23:08:11
+ * @LastEditTime: 2020-06-11 22:17:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /myStudent/webpack/build/webpack.dev.js
@@ -72,7 +72,7 @@ const mergeWebpackConfig = webpackMerge(baseWebpackConfig, {
 			errors: true,
 		},
 		publicPath: config.dev.assetsPublicPath,
-		quiet: true,
+		// quiet: true,
 		watchOptions: {
 			poll: true,
 		},

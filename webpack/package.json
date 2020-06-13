@@ -47,6 +47,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.1",
     "@babel/runtime": "^7.10.2",
-    "@babel/runtime-corejs3": "^7.10.2"
+    "@babel/runtime-corejs3": "^7.10.2",
+    "axios": "^0.19.2"
   }
 }
